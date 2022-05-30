@@ -1,11 +1,11 @@
 import { Button, Container, Grid, Heading } from '@chakra-ui/react'
 import type { GetServerSideProps, NextPage } from 'next'
-import { useEffect, useState } from 'react'
 
 import { API } from '@interfaces/api'
 import { API_KEY } from '@constants/api'
 import { Game } from '@components/Game'
 import { usePagination } from '@hooks/usePagination'
+import { useState } from 'react'
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}`)
